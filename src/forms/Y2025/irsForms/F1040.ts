@@ -930,31 +930,31 @@ export default class F1040 extends F1040Base {
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent1[0].c1_13[0]',
-        true
+        deps[0] !== undefined
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent2[0].c1_14[0]',
-        (deps[0]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
+        (deps[1]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent2[0].c1_15[0]',
-        true
+        deps[1] !== undefined
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent3[0].c1_16[0]',
-        (deps[0]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
+        (deps[2]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent3[0].c1_17[0]',
-        true
+        deps[2] !== undefined
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent4[0].c1_18[0]',
-        (deps[0]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
+        (deps[3]?.qualifyingInfo?.numberOfMonths ?? 0) > 6
       ),
       checkbox(
         'topmostSubform[0].Page1[0].Table_Dependents[0].Row5[0].Dependent4[0].c1_19[0]',
-        true
+        deps[3] !== undefined
       ),
       // Row 6: new OBBB dependent checkboxes (undefined) (70-77)
       // even is student, odd is unhandled disability

@@ -53,6 +53,7 @@ const moduleCode = standaloneCode(ajv, {
   F1098e: '#/definitions/F1098e',
   ItemizedDeductions: '#/definitions/ItemizedDeductions',
   Form1098Mortgage: '#/definitions/Form1098MortgageDateString',
+  DependentCareExpenses: '#/definitions/DependentCareExpenses',
   Responses: '#/definitions/Responses',
   StateResidency: '#/definitions/StateResidency',
   HealthSavingsAccount: '#/definitions/HealthSavingsAccountDateString',

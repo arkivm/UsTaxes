@@ -779,11 +779,36 @@ export interface AmtAdjustments {
   foreignTaxCredit?: number
 }
 
+export interface CareProvider {
+  name: string
+  /** 9-digit TIN — digits only, no dashes. */
+  taxId: string
+  taxIdType: 'SSN' | 'EIN'
+  amountPaid: number
+}
+
+export interface DependentCareExpense {
+  /** Dependent's SSN — links to the dependent already in the return. */
+  ssid: string
+  amount: number
+}
+
 /**
  * Child and dependent care expenses (Form 2441).
+ * The number of qualifying persons is derived automatically from the
+ * taxpayer's dependents (children under 13); only the raw amount paid
+ * to care providers needs to be entered.
  */
 export interface DependentCareExpenses {
-  totalExpenses: number
+  /** Part I — care providers (up to 3 shown on the form). */
+  providers: CareProvider[]
+  /** Part II column (c) — qualifying expenses per dependent. */
+  dependentExpenses: DependentCareExpense[]
+  /**
+   * Legacy field — used as fallback when providers array is empty.
+   * Kept so existing saved returns still compute correctly.
+   */
+  totalExpenses?: number
 }
 
 /**

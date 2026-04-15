@@ -250,6 +250,7 @@ export default class F1040 extends F1040Base {
       this.scheduleR,
       this.scheduleEIC,
       this.schedule8812,
+      this.f2441,
       this.f4797,
       this.f4952,
       this.f4972,

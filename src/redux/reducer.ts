@@ -358,6 +358,12 @@ const formReducer = (
         itemizedDeductions: action.formData
       }
     }
+    case ActionName.SET_DEPENDENT_CARE_EXPENSES: {
+      return {
+        ...newState,
+        dependentCareExpenses: action.formData
+      }
+    }
     case ActionName.SET_INFO: {
       return {
         ...newState,

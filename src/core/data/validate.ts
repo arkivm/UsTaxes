@@ -75,6 +75,8 @@ export const form1098Mortgage =
   fns.Form1098Mortgage as ValidateFunction<types.Form1098MortgageDateString>
 export const itemizedDeductions =
   fns.ItemizedDeductions as ValidateFunction<types.ItemizedDeductions>
+export const dependentCareExpenses =
+  fns.DependentCareExpenses as ValidateFunction<types.DependentCareExpenses>
 export const responses = fns.Responses as ValidateFunction<types.Responses>
 export const stateResidency =
   fns.StateResidency as ValidateFunction<types.StateResidency>

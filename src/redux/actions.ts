@@ -18,6 +18,7 @@ import {
   Ira,
   Asset,
   ItemizedDeductions,
+  DependentCareExpenses,
   F3921,
   ScheduleK1Form1065,
   TaxYear,
@@ -77,6 +78,7 @@ export enum ActionName {
   EDIT_F1098_MORTGAGE = 'EDIT_F1098_MORTGAGE',
   REMOVE_F1098_MORTGAGE = 'REMOVE_F1098_MORTGAGE',
   SET_ITEMIZED_DEDUCTIONS = 'SET_ITEMIZED_DEDUCTIONS',
+  SET_DEPENDENT_CARE_EXPENSES = 'SET_DEPENDENT_CARE_EXPENSES',
   ADD_HSA = 'ADD_HSA',
   EDIT_HSA = 'EDIT_HSA',
   REMOVE_HSA = 'REMOVE_HSA',
@@ -168,6 +170,10 @@ type SetItemizedDeductions = Save<
   typeof ActionName.SET_ITEMIZED_DEDUCTIONS,
   ItemizedDeductions
 >
+type SetDependentCareExpenses = Save<
+  typeof ActionName.SET_DEPENDENT_CARE_EXPENSES,
+  DependentCareExpenses
+>
 type SetInfo = Save<typeof ActionName.SET_INFO, InformationDateString>
 type SetActiveYear = Save<typeof ActionName.SET_ACTIVE_YEAR, TaxYear>
 type AddIRA = Save<typeof ActionName.ADD_IRA, Ira>
@@ -228,6 +234,7 @@ export type Actions =
   | EditForm1098Mortgage
   | RemoveForm1098Mortgage
   | SetItemizedDeductions
+  | SetDependentCareExpenses
   | AddHSA
   | EditHSA
   | RemoveHSA
@@ -468,6 +475,12 @@ export const setItemizedDeductions: ActionCreator<ItemizedDeductions> =
   makeActionCreator(
     ActionName.SET_ITEMIZED_DEDUCTIONS,
     validators.itemizedDeductions
+  )
+
+export const setDependentCareExpenses: ActionCreator<DependentCareExpenses> =
+  makeActionCreator(
+    ActionName.SET_DEPENDENT_CARE_EXPENSES,
+    validators.dependentCareExpenses
   )
 
 // debugging purposes only, leaving unchecked.

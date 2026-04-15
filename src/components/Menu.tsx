@@ -32,6 +32,7 @@ import GettingStarted from './GettingStarted'
 import F1098eInfo from './deductions/F1098eInfo'
 import F1098MortgageInfo from './deductions/F1098MortgageInfo'
 import ItemizedDeductions from './deductions/ItemizedDeductions'
+import DependentCareExpenses from './credits/DependentCareExpenses'
 import Questions from './Questions'
 import HelpAndFeedback from './HelpAndFeedback'
 import UserSettings from './UserSettings'
@@ -158,6 +159,16 @@ export const drawerSections: Section[] = [
         'Itemized Deductions',
         Urls.deductions.itemized,
         <ItemizedDeductions />
+      )
+    ]
+  },
+  {
+    title: 'Credits',
+    items: [
+      item(
+        'Child and Dependent Care (Form 2441)',
+        Urls.credits.dependentCare,
+        <DependentCareExpenses />
       )
     ]
   },

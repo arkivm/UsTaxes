@@ -51,6 +51,7 @@ interface IncomeW2UserInput {
   state?: State
   stateWages: string
   stateWithholding: string
+  box10DependentCare: string
   box12: W2Box12Info<string>
 }
 
@@ -67,6 +68,7 @@ const blankW2UserInput: IncomeW2UserInput = {
   medicareWithholding: '',
   stateWages: '',
   stateWithholding: '',
+  box10DependentCare: '',
   box12: {}
 }
 
@@ -84,6 +86,7 @@ const toIncomeW2 = (formData: IncomeW2UserInput): IncomeW2 => ({
   state: formData.state,
   stateWages: parseFormNumberOrThrow(formData.stateWages),
   stateWithholding: parseFormNumberOrThrow(formData.stateWithholding),
+  box10DependentCare: parseFormNumber(formData.box10DependentCare),
   personRole: formData.personRole ?? PersonRole.PRIMARY,
   box12: _.mapValues(formData.box12, (v) => parseFormNumber(v))
 })
@@ -100,6 +103,7 @@ const toIncomeW2UserInput = (data: IncomeW2): IncomeW2UserInput => ({
   state: data.state,
   stateWages: data.stateWages?.toString() ?? '',
   stateWithholding: data.stateWithholding?.toString() ?? '',
+  box10DependentCare: data.box10DependentCare?.toString() ?? '',
   box12: _.mapValues(data.box12, (v) => v?.toString())
 })
 
@@ -277,6 +281,13 @@ export default function W2JobInfo(): ReactElement {
           name="medicareWithholding"
           label={boxLabel('6', 'Medicare tax withheld')}
           patternConfig={Patterns.currency}
+          sizes={{ xs: 12, lg: 6 }}
+        />
+        <LabeledInput
+          name="box10DependentCare"
+          label={boxLabel('10', 'Dependent care benefits')}
+          patternConfig={Patterns.currency}
+          required={false}
           sizes={{ xs: 12, lg: 6 }}
         />
         <Grid item xs={12} lg={12}>

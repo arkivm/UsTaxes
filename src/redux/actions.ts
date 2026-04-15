@@ -8,6 +8,7 @@ import {
   ContactInfo,
   Supported1099,
   F1098e,
+  Form1098MortgageDateString,
   SpouseDateString,
   Property,
   StateResidency,
@@ -33,6 +34,7 @@ import {
   EditW2Action,
   EditEstimatedTaxesAction,
   Edit1098eAction,
+  EditForm1098MortgageAction,
   EditHSAAction,
   EditIraAction,
   EditAssetAction,
@@ -71,6 +73,9 @@ export enum ActionName {
   ADD_1098e = 'ADD_1098e',
   EDIT_1098e = 'EDIT_1098e',
   REMOVE_1098e = 'REMOVE_1098e',
+  ADD_F1098_MORTGAGE = 'ADD_F1098_MORTGAGE',
+  EDIT_F1098_MORTGAGE = 'EDIT_F1098_MORTGAGE',
+  REMOVE_F1098_MORTGAGE = 'REMOVE_F1098_MORTGAGE',
   SET_ITEMIZED_DEDUCTIONS = 'SET_ITEMIZED_DEDUCTIONS',
   ADD_HSA = 'ADD_HSA',
   EDIT_HSA = 'EDIT_HSA',
@@ -147,6 +152,18 @@ type AnswerQuestion = Save<typeof ActionName.ANSWER_QUESTION, Responses>
 type Add1098e = Save<typeof ActionName.ADD_1098e, F1098e>
 type Edit1098e = Save<typeof ActionName.EDIT_1098e, Edit1098eAction>
 type Remove1098e = Save<typeof ActionName.REMOVE_1098e, number>
+type AddForm1098Mortgage = Save<
+  typeof ActionName.ADD_F1098_MORTGAGE,
+  Form1098MortgageDateString
+>
+type EditForm1098Mortgage = Save<
+  typeof ActionName.EDIT_F1098_MORTGAGE,
+  EditForm1098MortgageAction
+>
+type RemoveForm1098Mortgage = Save<
+  typeof ActionName.REMOVE_F1098_MORTGAGE,
+  number
+>
 type SetItemizedDeductions = Save<
   typeof ActionName.SET_ITEMIZED_DEDUCTIONS,
   ItemizedDeductions
@@ -207,6 +224,9 @@ export type Actions =
   | Add1098e
   | Edit1098e
   | Remove1098e
+  | AddForm1098Mortgage
+  | EditForm1098Mortgage
+  | RemoveForm1098Mortgage
   | SetItemizedDeductions
   | AddHSA
   | EditHSA
@@ -430,6 +450,17 @@ export const edit1098e: ActionCreator<Edit1098eAction> = makeActionCreator(
 
 export const remove1098e: ActionCreator<number> = makeActionCreator(
   ActionName.REMOVE_1098e,
+  indexValidator
+)
+
+export const addForm1098Mortgage: ActionCreator<Form1098MortgageDateString> =
+  makeActionCreator(ActionName.ADD_F1098_MORTGAGE, validators.form1098Mortgage)
+
+export const editForm1098Mortgage: ActionCreator<EditForm1098MortgageAction> =
+  makeActionCreator(ActionName.EDIT_F1098_MORTGAGE)
+
+export const removeForm1098Mortgage: ActionCreator<number> = makeActionCreator(
+  ActionName.REMOVE_F1098_MORTGAGE,
   indexValidator
 )
 

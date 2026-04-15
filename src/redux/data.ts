@@ -43,6 +43,10 @@ export const stringToDateInfo = <I extends Information<string>>(
   info: I
 ): Information<Date> => ({
   ...info,
+  form1098s: (info.form1098s ?? []).map((m) => ({
+    ...m,
+    originationDate: new Date(m.originationDate)
+  })),
   healthSavingsAccounts: info.healthSavingsAccounts.map((h) => ({
     ...h,
     startDate: new Date(h.startDate),
@@ -64,6 +68,10 @@ export const infoToStringInfo = <I extends Information<Date>>(
   info: I
 ): Information<string> => ({
   ...info,
+  form1098s: (info.form1098s ?? []).map((m) => ({
+    ...m,
+    originationDate: m.originationDate.toISOString()
+  })),
   healthSavingsAccounts: info.healthSavingsAccounts.map((h) => ({
     ...h,
     startDate: h.startDate.toISOString(),

@@ -121,6 +121,7 @@ const info: Information = {
     FOREIGN_TRUST_RELATIONSHIP: false
   },
   f1098es: [],
+  form1098s: [],
   f3921s: [],
   scheduleK1Form1065s: [],
   itemizedDeductions: undefined,

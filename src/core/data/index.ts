@@ -500,6 +500,31 @@ export interface F1098e {
   interest: number
 }
 
+/**
+ * Form 1098 — Mortgage Interest Statement.
+ * Boxes from the IRS form: 1=interest, 2=principal, 3=origination date,
+ * 5=mortgage insurance premiums, 6=points paid on purchase.
+ */
+export interface Form1098Mortgage<D = Date> {
+  lenderName: string
+  /** Box 1: Mortgage interest received from borrower(s). */
+  mortgageInterestReceived: number
+  /** Box 2: Outstanding mortgage principal as of January 1. */
+  outstandingPrincipal: number
+  /**
+   * Box 3: Mortgage origination date.
+   * Pre-Dec 16 2017 loans → $1,000,000 acquisition debt limit.
+   * Dec 16 2017 or later → $750,000 limit (TCJA).
+   */
+  originationDate: D
+  /** Box 5: Mortgage insurance premiums (MIP). */
+  mortgageInsurancePremiums?: number
+  /** Box 6: Points paid on purchase of principal residence. */
+  points?: number
+}
+
+export type Form1098MortgageDateString = Form1098Mortgage<string>
+
 export interface F3921 {
   name: string
   personRole: PersonRole.PRIMARY | PersonRole.SPOUSE
@@ -758,12 +783,6 @@ export interface AmtAdjustments {
  * Child and dependent care expenses (Form 2441).
  */
 export interface DependentCareExpenses {
-  /**
-   * Number of qualifying persons (children under 13 or disabled dependents).
-   * Determines the expense cap ($3,000 for 1, $6,000 for 2+).
-   */
-  qualifyingPersonCount: number
-  /** Total qualified care expenses paid to all providers during the year. */
   totalExpenses: number
 }
 
@@ -1100,6 +1119,7 @@ export interface Information<D = Date> {
   realEstate: Property[]
   estimatedTaxes: EstimatedTaxPayments[]
   f1098es: F1098e[]
+  form1098s: Form1098Mortgage<D>[]
   f3921s: F3921[]
   scheduleK1Form1065s: ScheduleK1Form1065[]
   itemizedDeductions: ItemizedDeductions | undefined
@@ -1218,6 +1238,8 @@ export type EditEstimatedTaxesAction = ArrayItemEditAction<EstimatedTaxPayments>
 export type Edit1099Action = ArrayItemEditAction<Supported1099>
 export type EditPropertyAction = ArrayItemEditAction<Property>
 export type Edit1098eAction = ArrayItemEditAction<F1098e>
+export type EditForm1098MortgageAction =
+  ArrayItemEditAction<Form1098MortgageDateString>
 export type EditHSAAction = ArrayItemEditAction<HealthSavingsAccountDateString>
 export type EditIraAction = ArrayItemEditAction<Ira>
 export type EditAssetAction = ArrayItemEditAction<Asset<Date>>

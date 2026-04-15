@@ -15,6 +15,7 @@ export const blankState: Information = {
   taxPayer: { dependents: [] },
   questions: {},
   f1098es: [],
+  form1098s: [],
   f3921s: [],
   scheduleK1Form1065s: [],
   itemizedDeductions: undefined,
@@ -274,6 +275,37 @@ const formReducer = (
       return {
         ...newState,
         f1098es: new1098es
+      }
+    }
+    case ActionName.ADD_F1098_MORTGAGE: {
+      return {
+        ...newState,
+        form1098s: [
+          ...(newState.form1098s ?? []),
+          {
+            ...action.formData,
+            originationDate: new Date(action.formData.originationDate)
+          }
+        ]
+      }
+    }
+    case ActionName.EDIT_F1098_MORTGAGE: {
+      const newMortgages = [...(newState.form1098s ?? [])]
+      newMortgages.splice(action.formData.index, 1, {
+        ...action.formData.value,
+        originationDate: new Date(action.formData.value.originationDate)
+      })
+      return {
+        ...newState,
+        form1098s: newMortgages
+      }
+    }
+    case ActionName.REMOVE_F1098_MORTGAGE: {
+      const newMortgages = [...(newState.form1098s ?? [])]
+      newMortgages.splice(action.formData, 1)
+      return {
+        ...newState,
+        form1098s: newMortgages
       }
     }
     case ActionName.ADD_F3921: {

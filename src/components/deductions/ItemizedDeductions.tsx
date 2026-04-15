@@ -168,29 +168,16 @@ export const ItemizedDeductionsInfo = (): ReactElement => {
         />
       </Grid>
       <p>Interest You Paid</p>
+      <p>
+        Home mortgage interest, points, and insurance premiums from Form 1098
+        are computed automatically — enter them under{' '}
+        <strong>Mortgage Interest (Form 1098)</strong> in the navigation.
+      </p>
       <Grid container spacing={2}>
         <LabeledInput
-          label="Home mortgage interest and points reported to you on Form 1098"
-          patternConfig={Patterns.currency}
-          name="interest8a"
-          required={false}
-        />
-        <LabeledInput
-          label="Home mortgage interest not reported to you on Form 1098"
+          label="Home mortgage interest not reported on Form 1098 (e.g. paid to a private individual)"
           patternConfig={Patterns.currency}
           name="interest8b"
-          required={false}
-        />
-        <LabeledInput
-          label="Points not reported to you on Form 1098"
-          patternConfig={Patterns.currency}
-          name="interest8c"
-          required={false}
-        />
-        <LabeledInput
-          label="Mortgage insurance premiums"
-          patternConfig={Patterns.currency}
-          name="interest8d"
           required={false}
         />
         <LabeledInput

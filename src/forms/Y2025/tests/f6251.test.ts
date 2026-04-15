@@ -62,6 +62,7 @@ const baseInformation: ValidatedInformation = {
   },
   questions: {},
   f1098es: [],
+  form1098s: [],
   stateResidencies: [{ state: 'AL' }],
   healthSavingsAccounts: [],
   individualRetirementArrangements: []

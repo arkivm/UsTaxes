@@ -71,6 +71,8 @@ export const property = fns.Property as ValidateFunction<types.Property>
 export const propertyType =
   fns.PropertyType as ValidateFunction<types.PropertyType>
 export const f1098e = fns.F1098e as ValidateFunction<types.F1098e>
+export const form1098Mortgage =
+  fns.Form1098Mortgage as ValidateFunction<types.Form1098MortgageDateString>
 export const itemizedDeductions =
   fns.ItemizedDeductions as ValidateFunction<types.ItemizedDeductions>
 export const responses = fns.Responses as ValidateFunction<types.Responses>

@@ -78,15 +78,84 @@ export default class ScheduleA extends F1040Attachment {
 
   l7 = (): number => this.l5e() + (this.l6() ?? 0)
 
-  // TODO
-  l8AllMortgageLoan = (): boolean => false
-  l8a = (): number => Number(this.itemizedDeductions.interest8a)
+  private static readonly TCJA_CUTOFF = new Date('2017-12-16')
+  private static readonly TCJA_LIMIT = 750_000
+  private static readonly PRE_TCJA_LIMIT = 1_000_000
+
+  /**
+   * Deductible home mortgage interest from Form 1098 entries.
+   * Applies the TCJA $750k (post-2017) or $1M (pre-2018) acquisition debt
+   * limit across the combined outstanding principal of all loans.
+   * Falls back to the manually-entered interest8a when no 1098s are on file.
+   */
+  private mortgageDeductibleInterest = (): number => {
+    const mortgages = this.f1040.info.form1098s ?? []
+    if (mortgages.length === 0) {
+      return Number(this.itemizedDeductions.interest8a)
+    }
+    const totalPrincipal = mortgages.reduce(
+      (sum, m) => sum + m.outstandingPrincipal,
+      0
+    )
+    const totalInterest = mortgages.reduce(
+      (sum, m) => sum + m.mortgageInterestReceived,
+      0
+    )
+    const hasNewLoan = mortgages.some(
+      (m) => new Date(m.originationDate) >= ScheduleA.TCJA_CUTOFF
+    )
+    const limit = hasNewLoan ? ScheduleA.TCJA_LIMIT : ScheduleA.PRE_TCJA_LIMIT
+    if (totalPrincipal <= limit) return totalInterest
+    return totalInterest * (limit / totalPrincipal)
+  }
+
+  /**
+   * True when all mortgages are within the applicable debt limit
+   * (i.e. full interest is deductible without proration).
+   */
+  l8AllMortgageLoan = (): boolean => {
+    const mortgages = this.f1040.info.form1098s ?? []
+    if (mortgages.length === 0) return false
+    const totalPrincipal = mortgages.reduce(
+      (sum, m) => sum + m.outstandingPrincipal,
+      0
+    )
+    const hasNewLoan = mortgages.some(
+      (m) => new Date(m.originationDate) >= ScheduleA.TCJA_CUTOFF
+    )
+    const limit = hasNewLoan ? ScheduleA.TCJA_LIMIT : ScheduleA.PRE_TCJA_LIMIT
+    return totalPrincipal <= limit
+  }
+
+  l8a = (): number => this.mortgageDeductibleInterest()
 
   // TODO
   l8bUnreportedInterest = (): string | undefined => undefined
   l8b = (): number => Number(this.itemizedDeductions.interest8b)
-  l8c = (): number => Number(this.itemizedDeductions.interest8c)
-  l8d = (): number | undefined => undefined // Reserved for future use
+
+  /**
+   * Points: auto-computed from Form 1098 Box 6, or falls back to interest8c.
+   */
+  l8c = (): number => {
+    const mortgages = this.f1040.info.form1098s ?? []
+    if (mortgages.length === 0)
+      return Number(this.itemizedDeductions.interest8c)
+    return mortgages.reduce((sum, m) => sum + (m.points ?? 0), 0)
+  }
+
+  /**
+   * Mortgage insurance premiums: auto-computed from Form 1098 Box 5.
+   */
+  l8d = (): number | undefined => {
+    const mortgages = this.f1040.info.form1098s ?? []
+    if (mortgages.length === 0) return undefined
+    const total = mortgages.reduce(
+      (sum, m) => sum + (m.mortgageInsurancePremiums ?? 0),
+      0
+    )
+    return total > 0 ? total : undefined
+  }
+
   l8e = (): number => this.l8a() + this.l8b() + this.l8c()
 
   // Used in Form 8960. Capped by Form 4952 net investment income when present.

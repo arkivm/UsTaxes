@@ -21,8 +21,14 @@ export default class Schedule1 extends F1040Attachment {
     (this.f1040.studentLoanInterestWorksheet !== undefined &&
       this.f1040.studentLoanInterestWorksheet.notMFS() &&
       this.f1040.studentLoanInterestWorksheet.isNotDependent()) ||
-    this.f1040.f8889.isNeeded() ||
-    (this.f1040.f8889Spouse?.isNeeded() ?? false) ||
+    // Only pull in Schedule 1 for HSA when there's an actual deduction
+    // or taxable distribution — payroll-only HSA contributions (W-2 Box 12 W)
+    // are already excluded from Box 1 wages and produce neither.
+    (this.f1040.f8889.isNeeded() &&
+      (this.f1040.f8889.l13() > 0 || this.f1040.f8889.l20() > 0)) ||
+    ((this.f1040.f8889Spouse?.isNeeded() ?? false) &&
+      ((this.f1040.f8889Spouse?.l13() ?? 0) > 0 ||
+        (this.f1040.f8889Spouse?.l20() ?? 0) > 0)) ||
     (this.f1040.scheduleC?.isNeeded() ?? false) ||
     (this.f1040.info.otherIncome?.educatorExpenses ?? 0) > 0 ||
     (this.f1040.info.otherIncome?.spouseEducatorExpenses ?? 0) > 0 ||

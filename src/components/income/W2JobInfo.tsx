@@ -52,6 +52,7 @@ interface IncomeW2UserInput {
   stateWages: string
   stateWithholding: string
   box10DependentCare: string
+  caSDI: string
   box12: W2Box12Info<string>
 }
 
@@ -69,6 +70,7 @@ const blankW2UserInput: IncomeW2UserInput = {
   stateWages: '',
   stateWithholding: '',
   box10DependentCare: '',
+  caSDI: '',
   box12: {}
 }
 
@@ -87,6 +89,7 @@ const toIncomeW2 = (formData: IncomeW2UserInput): IncomeW2 => ({
   stateWages: parseFormNumberOrThrow(formData.stateWages),
   stateWithholding: parseFormNumberOrThrow(formData.stateWithholding),
   box10DependentCare: parseFormNumber(formData.box10DependentCare),
+  caSDI: parseFormNumber(formData.caSDI),
   personRole: formData.personRole ?? PersonRole.PRIMARY,
   box12: _.mapValues(formData.box12, (v) => parseFormNumber(v))
 })
@@ -104,6 +107,7 @@ const toIncomeW2UserInput = (data: IncomeW2): IncomeW2UserInput => ({
   stateWages: data.stateWages?.toString() ?? '',
   stateWithholding: data.stateWithholding?.toString() ?? '',
   box10DependentCare: data.box10DependentCare?.toString() ?? '',
+  caSDI: data.caSDI?.toString() ?? '',
   box12: _.mapValues(data.box12, (v) => v?.toString())
 })
 
@@ -286,6 +290,13 @@ export default function W2JobInfo(): ReactElement {
         <LabeledInput
           name="box10DependentCare"
           label={boxLabel('10', 'Dependent care benefits')}
+          patternConfig={Patterns.currency}
+          required={false}
+          sizes={{ xs: 12, lg: 6 }}
+        />
+        <LabeledInput
+          name="caSDI"
+          label={boxLabel('14', 'CA SDI / CASDI withheld (California only)')}
           patternConfig={Patterns.currency}
           required={false}
           sizes={{ xs: 12, lg: 6 }}

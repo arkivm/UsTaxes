@@ -101,6 +101,8 @@ export interface IncomeW2 {
   ssWages: number
   /** W-2 Box 10: Dependent care benefits provided by employer. */
   box10DependentCare?: number
+  /** W-2 Box 14: California SDI withheld (labeled "CA SDI" or "CASDI"). */
+  caSDI?: number
   ssWithholding: number
   medicareWithholding: number
   employer?: Employer
@@ -1138,6 +1140,16 @@ export interface ObbbDeductions {
   electTrumpAccountContribution?: boolean
 }
 
+export interface CAStateInfo {
+  /**
+   * True if the taxpayer rented their CA principal residence for the entire year.
+   * Qualifies for the non-refundable Renter's Credit (Form 540 line 46).
+   */
+  paidRentEntireYear?: boolean
+  /** CA estimated tax payments (separate from federal estimatedTaxes). */
+  estimatedTaxPayments?: EstimatedTaxPayments[]
+}
+
 export interface Information<D = Date> {
   f1099s: Supported1099[]
   w2s: IncomeW2[]
@@ -1163,6 +1175,8 @@ export interface Information<D = Date> {
   otherIncome?: OtherIncome
   /** Child and dependent care expenses for Form 2441. */
   dependentCareExpenses?: DependentCareExpenses
+  /** California-specific state return information. */
+  caStateInfo?: CAStateInfo
   /** User-provided AMT preference and adjustment items for Form 6251. */
   amtAdjustments?: AmtAdjustments
   /**

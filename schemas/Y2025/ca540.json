@@ -1,0 +1,1817 @@
+{
+  "formName": "540",
+  "fields": [
+    {
+      "name": "540_form_1035 CB",
+      "fullyQualifiedName": "540_form_1035 CB",
+      "type": "checkbox",
+      "index": 0,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1041",
+      "fullyQualifiedName": "540_form_1041",
+      "type": "text",
+      "index": 1,
+      "maxLength": 1,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1043",
+      "fullyQualifiedName": "540_form_1043",
+      "type": "text",
+      "index": 2,
+      "maxLength": 1,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1045",
+      "fullyQualifiedName": "540_form_1045",
+      "type": "text",
+      "index": 3,
+      "maxLength": 1,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1042",
+      "fullyQualifiedName": "540_form_1042",
+      "type": "text",
+      "index": 4,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1044",
+      "fullyQualifiedName": "540_form_1044",
+      "type": "text",
+      "index": 5,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1046",
+      "fullyQualifiedName": "540_form_1046",
+      "type": "text",
+      "index": 6,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1039",
+      "fullyQualifiedName": "540_form_1039",
+      "type": "text",
+      "index": 7,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1037",
+      "fullyQualifiedName": "540_form_1037",
+      "type": "text",
+      "index": 8,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1038",
+      "fullyQualifiedName": "540_form_1038",
+      "type": "text",
+      "index": 9,
+      "maxLength": 4,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1029 CB",
+      "fullyQualifiedName": "540_form_1029 CB",
+      "type": "checkbox",
+      "index": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1040 CB",
+      "fullyQualifiedName": "540_form_1040 CB",
+      "type": "checkbox",
+      "index": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1028",
+      "fullyQualifiedName": "540_form_1028",
+      "type": "text",
+      "index": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1030",
+      "fullyQualifiedName": "540_form_1030",
+      "type": "text",
+      "index": 13,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1031",
+      "fullyQualifiedName": "540_form_1031",
+      "type": "text",
+      "index": 14,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1032",
+      "fullyQualifiedName": "540_form_1032",
+      "type": "text",
+      "index": 15,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1033",
+      "fullyQualifiedName": "540_form_1033",
+      "type": "text",
+      "index": 16,
+      "maxLength": 2,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1034",
+      "fullyQualifiedName": "540_form_1034",
+      "type": "text",
+      "index": 17,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1024",
+      "fullyQualifiedName": "540_form_1024",
+      "type": "text",
+      "index": 18,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1025",
+      "fullyQualifiedName": "540_form_1025",
+      "type": "text",
+      "index": 19,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1027",
+      "fullyQualifiedName": "540_form_1027",
+      "type": "text",
+      "index": 20,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1026",
+      "fullyQualifiedName": "540_form_1026",
+      "type": "text",
+      "index": 21,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1023",
+      "fullyQualifiedName": "540_form_1023",
+      "type": "text",
+      "index": 22,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1022",
+      "fullyQualifiedName": "540_form_1022",
+      "type": "text",
+      "index": 23,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1021",
+      "fullyQualifiedName": "540_form_1021",
+      "type": "text",
+      "index": 24,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1018",
+      "fullyQualifiedName": "540_form_1018",
+      "type": "text",
+      "index": 25,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1019",
+      "fullyQualifiedName": "540_form_1019",
+      "type": "text",
+      "index": 26,
+      "maxLength": 2,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1017",
+      "fullyQualifiedName": "540_form_1017",
+      "type": "text",
+      "index": 27,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1016",
+      "fullyQualifiedName": "540_form_1016",
+      "type": "text",
+      "index": 28,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1015",
+      "fullyQualifiedName": "540_form_1015",
+      "type": "text",
+      "index": 29,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1013",
+      "fullyQualifiedName": "540_form_1013",
+      "type": "text",
+      "index": 30,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1014",
+      "fullyQualifiedName": "540_form_1014",
+      "type": "text",
+      "index": 31,
+      "maxLength": 6,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1012",
+      "fullyQualifiedName": "540_form_1012",
+      "type": "text",
+      "index": 32,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1011",
+      "fullyQualifiedName": "540_form_1011",
+      "type": "text",
+      "index": 33,
+      "maxLength": 4,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1010",
+      "fullyQualifiedName": "540_form_1010",
+      "type": "text",
+      "index": 34,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1008",
+      "fullyQualifiedName": "540_form_1008",
+      "type": "text",
+      "index": 35,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1003",
+      "fullyQualifiedName": "540_form_1003",
+      "type": "text",
+      "index": 36,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1005",
+      "fullyQualifiedName": "540_form_1005",
+      "type": "text",
+      "index": 37,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1004",
+      "fullyQualifiedName": "540_form_1004",
+      "type": "text",
+      "index": 38,
+      "maxLength": 1,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1006",
+      "fullyQualifiedName": "540_form_1006",
+      "type": "text",
+      "index": 39,
+      "maxLength": 4,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1007",
+      "fullyQualifiedName": "540_form_1007",
+      "type": "text",
+      "index": 40,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1009",
+      "fullyQualifiedName": "540_form_1009",
+      "type": "text",
+      "index": 41,
+      "maxLength": 1,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1020",
+      "fullyQualifiedName": "540_form_1020",
+      "type": "text",
+      "index": 42,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1001 CB",
+      "fullyQualifiedName": "540_form_1001 CB",
+      "type": "checkbox",
+      "index": 43,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1002",
+      "fullyQualifiedName": "540_form_1002",
+      "type": "text",
+      "index": 44,
+      "maxLength": 2,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_1036 RB",
+      "fullyQualifiedName": "540_form_1036 RB",
+      "type": "radio",
+      "index": 45,
+      "options": [
+        "1 . Single.",
+        "2 . Married/R D P filing jointly (even if only one spouse / R D P had income). See instructions.",
+        "4 . Head of household (with qualifying person). See instructions.",
+        "3 . Married or R D P filing separately.",
+        "5 . Qualifying surviving spouse or R D P ."
+      ],
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2038",
+      "fullyQualifiedName": "540_form_2038",
+      "type": "text",
+      "index": 46,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2041",
+      "fullyQualifiedName": "540_form_2041",
+      "type": "text",
+      "index": 47,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2039",
+      "fullyQualifiedName": "540_form_2039",
+      "type": "text",
+      "index": 48,
+      "maxLength": 3,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2042",
+      "fullyQualifiedName": "540_form_2042",
+      "type": "text",
+      "index": 49,
+      "maxLength": 3,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2037",
+      "fullyQualifiedName": "540_form_2037",
+      "type": "text",
+      "index": 50,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2040",
+      "fullyQualifiedName": "540_form_2040",
+      "type": "text",
+      "index": 51,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2043",
+      "fullyQualifiedName": "540_form_2043",
+      "type": "text",
+      "index": 52,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2030",
+      "fullyQualifiedName": "540_form_2030",
+      "type": "text",
+      "index": 53,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2032",
+      "fullyQualifiedName": "540_form_2032",
+      "type": "text",
+      "index": 54,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2035",
+      "fullyQualifiedName": "540_form_2035",
+      "type": "text",
+      "index": 55,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2036",
+      "fullyQualifiedName": "540_form_2036",
+      "type": "text",
+      "index": 56,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2031",
+      "fullyQualifiedName": "540_form_2031",
+      "type": "text",
+      "index": 57,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2020",
+      "fullyQualifiedName": "540_form_2020",
+      "type": "text",
+      "index": 58,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2022",
+      "fullyQualifiedName": "540_form_2022",
+      "type": "text",
+      "index": 59,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2024",
+      "fullyQualifiedName": "540_form_2024",
+      "type": "text",
+      "index": 60,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2025",
+      "fullyQualifiedName": "540_form_2025",
+      "type": "text",
+      "index": 61,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2019",
+      "fullyQualifiedName": "540_form_2019",
+      "type": "text",
+      "index": 62,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2023",
+      "fullyQualifiedName": "540_form_2023",
+      "type": "text",
+      "index": 63,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2021",
+      "fullyQualifiedName": "540_form_2021",
+      "type": "text",
+      "index": 64,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2017",
+      "fullyQualifiedName": "540_form_2017",
+      "type": "text",
+      "index": 65,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2018",
+      "fullyQualifiedName": "540_form_2018",
+      "type": "text",
+      "index": 66,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2011",
+      "fullyQualifiedName": "540_form_2011",
+      "type": "text",
+      "index": 67,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2012",
+      "fullyQualifiedName": "540_form_2012",
+      "type": "text",
+      "index": 68,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2013",
+      "fullyQualifiedName": "540_form_2013",
+      "type": "text",
+      "index": 69,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2007",
+      "fullyQualifiedName": "540_form_2007",
+      "type": "text",
+      "index": 70,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2008",
+      "fullyQualifiedName": "540_form_2008",
+      "type": "text",
+      "index": 71,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2009",
+      "fullyQualifiedName": "540_form_2009",
+      "type": "text",
+      "index": 72,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2003",
+      "fullyQualifiedName": "540_form_2003",
+      "type": "text",
+      "index": 73,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2004",
+      "fullyQualifiedName": "540_form_2004",
+      "type": "text",
+      "index": 74,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2005",
+      "fullyQualifiedName": "540_form_2005",
+      "type": "text",
+      "index": 75,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2015",
+      "fullyQualifiedName": "540_form_2015",
+      "type": "text",
+      "index": 76,
+      "maxLength": 2,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2016",
+      "fullyQualifiedName": "540_form_2016",
+      "type": "text",
+      "index": 77,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2014",
+      "fullyQualifiedName": "540_form_2014",
+      "type": "text",
+      "index": 78,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2010",
+      "fullyQualifiedName": "540_form_2010",
+      "type": "text",
+      "index": 79,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2006",
+      "fullyQualifiedName": "540_form_2006",
+      "type": "text",
+      "index": 80,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2026 CB",
+      "fullyQualifiedName": "540_form_2026 CB",
+      "type": "checkbox",
+      "index": 81,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2028 CB",
+      "fullyQualifiedName": "540_form_2028 CB",
+      "type": "checkbox",
+      "index": 82,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2027 CB",
+      "fullyQualifiedName": "540_form_2027 CB",
+      "type": "checkbox",
+      "index": 83,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2029 CB",
+      "fullyQualifiedName": "540_form_2029 CB",
+      "type": "checkbox",
+      "index": 84,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2033 CB",
+      "fullyQualifiedName": "540_form_2033 CB",
+      "type": "checkbox",
+      "index": 85,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2034 CB",
+      "fullyQualifiedName": "540_form_2034 CB",
+      "type": "checkbox",
+      "index": 86,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3003",
+      "fullyQualifiedName": "540_form_3003",
+      "type": "text",
+      "index": 87,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3004",
+      "fullyQualifiedName": "540_form_3004",
+      "type": "text",
+      "index": 88,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3005",
+      "fullyQualifiedName": "540_form_3005",
+      "type": "text",
+      "index": 89,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3006",
+      "fullyQualifiedName": "540_form_3006",
+      "type": "text",
+      "index": 90,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2002",
+      "fullyQualifiedName": "540_form_2002",
+      "type": "text",
+      "index": 91,
+      "maxLength": 11,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_2001",
+      "fullyQualifiedName": "540_form_2001",
+      "type": "text",
+      "index": 92,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3023",
+      "fullyQualifiedName": "540_form_3023",
+      "type": "text",
+      "index": 93,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3024",
+      "fullyQualifiedName": "540_form_3024",
+      "type": "text",
+      "index": 94,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3022",
+      "fullyQualifiedName": "540_form_3022",
+      "type": "text",
+      "index": 95,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3019",
+      "fullyQualifiedName": "540_form_3019",
+      "type": "text",
+      "index": 96,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3011",
+      "fullyQualifiedName": "540_form_3011",
+      "type": "text",
+      "index": 97,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3012",
+      "fullyQualifiedName": "540_form_3012",
+      "type": "text",
+      "index": 98,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3013",
+      "fullyQualifiedName": "540_form_3013",
+      "type": "text",
+      "index": 99,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3014",
+      "fullyQualifiedName": "540_form_3014",
+      "type": "text",
+      "index": 100,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3015",
+      "fullyQualifiedName": "540_form_3015",
+      "type": "text",
+      "index": 101,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3016",
+      "fullyQualifiedName": "540_form_3016",
+      "type": "text",
+      "index": 102,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3018",
+      "fullyQualifiedName": "540_form_3018",
+      "type": "text",
+      "index": 103,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3020 RB",
+      "fullyQualifiedName": "540_form_3020 RB",
+      "type": "radio",
+      "index": 104,
+      "options": [
+        "No use tax is owed.",
+        "You paid your use tax obligation directly to  California Department of Tax and Fee Administration "
+      ],
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3008",
+      "fullyQualifiedName": "540_form_3008",
+      "type": "text",
+      "index": 105,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3009",
+      "fullyQualifiedName": "540_form_3009",
+      "type": "text",
+      "index": 106,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3010",
+      "fullyQualifiedName": "540_form_3010",
+      "type": "text",
+      "index": 107,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3007",
+      "fullyQualifiedName": "540_form_3007",
+      "type": "text",
+      "index": 108,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3021 CB",
+      "fullyQualifiedName": "540_form_3021 CB",
+      "type": "checkbox",
+      "index": 109,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3025",
+      "fullyQualifiedName": "540_form_3025",
+      "type": "text",
+      "index": 110,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3026",
+      "fullyQualifiedName": "540_form_3026",
+      "type": "text",
+      "index": 111,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3017",
+      "fullyQualifiedName": "540_form_3017",
+      "type": "text",
+      "index": 112,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_3027",
+      "fullyQualifiedName": "540_form_3027",
+      "type": "text",
+      "index": 113,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4020",
+      "fullyQualifiedName": "540_form_4020",
+      "type": "text",
+      "index": 114,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4021",
+      "fullyQualifiedName": "540_form_4021",
+      "type": "text",
+      "index": 115,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4022",
+      "fullyQualifiedName": "540_form_4022",
+      "type": "text",
+      "index": 116,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4019",
+      "fullyQualifiedName": "540_form_4019",
+      "type": "text",
+      "index": 117,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4018",
+      "fullyQualifiedName": "540_form_4018",
+      "type": "text",
+      "index": 118,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4017",
+      "fullyQualifiedName": "540_form_4017",
+      "type": "text",
+      "index": 119,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4016",
+      "fullyQualifiedName": "540_form_4016",
+      "type": "text",
+      "index": 120,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4013",
+      "fullyQualifiedName": "540_form_4013",
+      "type": "text",
+      "index": 121,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4014",
+      "fullyQualifiedName": "540_form_4014",
+      "type": "text",
+      "index": 122,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4015",
+      "fullyQualifiedName": "540_form_4015",
+      "type": "text",
+      "index": 123,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4011",
+      "fullyQualifiedName": "540_form_4011",
+      "type": "text",
+      "index": 124,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4012",
+      "fullyQualifiedName": "540_form_4012",
+      "type": "text",
+      "index": 125,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4009",
+      "fullyQualifiedName": "540_form_4009",
+      "type": "text",
+      "index": 126,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4010",
+      "fullyQualifiedName": "540_form_4010",
+      "type": "text",
+      "index": 127,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4006",
+      "fullyQualifiedName": "540_form_4006",
+      "type": "text",
+      "index": 128,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4007",
+      "fullyQualifiedName": "540_form_4007",
+      "type": "text",
+      "index": 129,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4008",
+      "fullyQualifiedName": "540_form_4008",
+      "type": "text",
+      "index": 130,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4003",
+      "fullyQualifiedName": "540_form_4003",
+      "type": "text",
+      "index": 131,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4004",
+      "fullyQualifiedName": "540_form_4004",
+      "type": "text",
+      "index": 132,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4005",
+      "fullyQualifiedName": "540_form_4005",
+      "type": "text",
+      "index": 133,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4023",
+      "fullyQualifiedName": "540_form_4023",
+      "type": "text",
+      "index": 134,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_4024",
+      "fullyQualifiedName": "540_form_4024",
+      "type": "text",
+      "index": 135,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5010",
+      "fullyQualifiedName": "540_form_5010",
+      "type": "text",
+      "index": 136,
+      "maxLength": 19,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5014",
+      "fullyQualifiedName": "540_form_5014",
+      "type": "text",
+      "index": 137,
+      "maxLength": 19,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5015",
+      "fullyQualifiedName": "540_form_5015",
+      "type": "text",
+      "index": 138,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5011",
+      "fullyQualifiedName": "540_form_5011",
+      "type": "text",
+      "index": 139,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5007",
+      "fullyQualifiedName": "540_form_5007",
+      "type": "text",
+      "index": 140,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5003",
+      "fullyQualifiedName": "540_form_5003",
+      "type": "text",
+      "index": 141,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5005",
+      "fullyQualifiedName": "540_form_5005",
+      "type": "text",
+      "index": 142,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5006",
+      "fullyQualifiedName": "540_form_5006",
+      "type": "text",
+      "index": 143,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5012",
+      "fullyQualifiedName": "540_form_5012",
+      "type": "text",
+      "index": 144,
+      "maxLength": 9,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5008",
+      "fullyQualifiedName": "540_form_5008",
+      "type": "text",
+      "index": 145,
+      "maxLength": 9,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5016 CB",
+      "fullyQualifiedName": "540_form_5016 CB",
+      "type": "checkbox",
+      "index": 146,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5002",
+      "fullyQualifiedName": "540_form_5002",
+      "type": "text",
+      "index": 147,
+      "maxLength": 12,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5017 RB",
+      "fullyQualifiedName": "540_form_5017 RB",
+      "type": "radio",
+      "index": 148,
+      "options": ["Yes", "No"],
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5018 CB",
+      "fullyQualifiedName": "540_form_5018 CB",
+      "type": "checkbox",
+      "index": 149,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5019 CB",
+      "fullyQualifiedName": "540_form_5019 CB",
+      "type": "checkbox",
+      "index": 150,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6002",
+      "fullyQualifiedName": "540_form_6002",
+      "type": "text",
+      "index": 151,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6009",
+      "fullyQualifiedName": "540_form_6009",
+      "type": "text",
+      "index": 152,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6006",
+      "fullyQualifiedName": "540_form_6006",
+      "type": "text",
+      "index": 153,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6010",
+      "fullyQualifiedName": "540_form_6010",
+      "type": "text",
+      "index": 154,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6004",
+      "fullyQualifiedName": "540_form_6004",
+      "type": "text",
+      "index": 155,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6005",
+      "fullyQualifiedName": "540_form_6005",
+      "type": "text",
+      "index": 156,
+      "maxLength": 9,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6007",
+      "fullyQualifiedName": "540_form_6007",
+      "type": "text",
+      "index": 157,
+      "maxLength": 9,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6003",
+      "fullyQualifiedName": "540_form_6003",
+      "type": "text",
+      "index": 158,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6001",
+      "fullyQualifiedName": "540_form_6001",
+      "type": "text",
+      "index": 159,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6008 RB",
+      "fullyQualifiedName": "540_form_6008 RB",
+      "type": "radio",
+      "index": 160,
+      "options": ["Yes", "No"],
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6003B",
+      "fullyQualifiedName": "540_form_6003B",
+      "type": "text",
+      "index": 161,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_6003C",
+      "fullyQualifiedName": "540_form_6003C",
+      "type": "text",
+      "index": 162,
+      "maxLength": 10,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5009A CB",
+      "fullyQualifiedName": "540_form_5009A CB",
+      "type": "checkbox",
+      "index": 163,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5009B CB",
+      "fullyQualifiedName": "540_form_5009B CB",
+      "type": "checkbox",
+      "index": 164,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5013A CB",
+      "fullyQualifiedName": "540_form_5013A CB",
+      "type": "checkbox",
+      "index": 165,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5013B CB",
+      "fullyQualifiedName": "540_form_5013B CB",
+      "type": "checkbox",
+      "index": 166,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5004A CB",
+      "fullyQualifiedName": "540_form_5004A CB",
+      "type": "checkbox",
+      "index": 167,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    },
+    {
+      "name": "540_form_5004B CB",
+      "fullyQualifiedName": "540_form_5004B CB",
+      "type": "checkbox",
+      "index": 168,
+      "flags": {
+        "readOnly": false,
+        "required": false
+      }
+    }
+  ],
+  "totalFields": 169
+}

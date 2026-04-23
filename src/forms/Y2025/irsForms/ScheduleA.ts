@@ -82,10 +82,19 @@ export default class ScheduleA extends F1040Attachment {
   private static readonly TCJA_LIMIT = 750_000
   private static readonly PRE_TCJA_LIMIT = 1_000_000
 
+  /** Average principal for a single mortgage: (Jan 1 + Dec 31) / 2, or Jan 1 alone. */
+  private static avgPrincipal = (m: {
+    outstandingPrincipal: number
+    principalAtYearEnd?: number
+  }): number =>
+    m.principalAtYearEnd !== undefined
+      ? (m.outstandingPrincipal + m.principalAtYearEnd) / 2
+      : m.outstandingPrincipal
+
   /**
    * Deductible home mortgage interest from Form 1098 entries.
    * Applies the TCJA $750k (post-2017) or $1M (pre-2018) acquisition debt
-   * limit across the combined outstanding principal of all loans.
+   * limit against the average principal ((Jan 1 + Dec 31) / 2) across all loans.
    * Falls back to the manually-entered interest8a when no 1098s are on file.
    */
   private mortgageDeductibleInterest = (): number => {
@@ -93,8 +102,8 @@ export default class ScheduleA extends F1040Attachment {
     if (mortgages.length === 0) {
       return Number(this.itemizedDeductions.interest8a)
     }
-    const totalPrincipal = mortgages.reduce(
-      (sum, m) => sum + m.outstandingPrincipal,
+    const totalAvgPrincipal = mortgages.reduce(
+      (sum, m) => sum + ScheduleA.avgPrincipal(m),
       0
     )
     const totalInterest = mortgages.reduce(
@@ -105,8 +114,8 @@ export default class ScheduleA extends F1040Attachment {
       (m) => new Date(m.originationDate) >= ScheduleA.TCJA_CUTOFF
     )
     const limit = hasNewLoan ? ScheduleA.TCJA_LIMIT : ScheduleA.PRE_TCJA_LIMIT
-    if (totalPrincipal <= limit) return totalInterest
-    return totalInterest * (limit / totalPrincipal)
+    if (totalAvgPrincipal <= limit) return totalInterest
+    return totalInterest * (limit / totalAvgPrincipal)
   }
 
   /**
@@ -116,15 +125,15 @@ export default class ScheduleA extends F1040Attachment {
   l8AllMortgageLoan = (): boolean => {
     const mortgages = this.f1040.info.form1098s ?? []
     if (mortgages.length === 0) return false
-    const totalPrincipal = mortgages.reduce(
-      (sum, m) => sum + m.outstandingPrincipal,
+    const totalAvgPrincipal = mortgages.reduce(
+      (sum, m) => sum + ScheduleA.avgPrincipal(m),
       0
     )
     const hasNewLoan = mortgages.some(
       (m) => new Date(m.originationDate) >= ScheduleA.TCJA_CUTOFF
     )
     const limit = hasNewLoan ? ScheduleA.TCJA_LIMIT : ScheduleA.PRE_TCJA_LIMIT
-    return totalPrincipal <= limit
+    return totalAvgPrincipal <= limit
   }
 
   l8a = (): number => this.mortgageDeductibleInterest()

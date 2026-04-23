@@ -21,6 +21,12 @@ const TCJA_CUTOFF = new Date('2017-12-16')
 const TCJA_LIMIT = 750_000
 const PRE_TCJA_LIMIT = 1_000_000
 
+/** Average principal: (Jan 1 + Dec 31) / 2, or Jan 1 alone if Dec 31 not provided. */
+const averagePrincipal = (m: Form1098Mortgage<Date | string>): number =>
+  m.principalAtYearEnd !== undefined
+    ? (m.outstandingPrincipal + m.principalAtYearEnd) / 2
+    : m.outstandingPrincipal
+
 /** Compute the deductible interest for display in the list secondary line. */
 const deductibleInterest = (m: Form1098Mortgage<Date | string>): number => {
   const d =
@@ -28,8 +34,9 @@ const deductibleInterest = (m: Form1098Mortgage<Date | string>): number => {
       ? m.originationDate
       : new Date(m.originationDate)
   const limit = d >= TCJA_CUTOFF ? TCJA_LIMIT : PRE_TCJA_LIMIT
-  if (m.outstandingPrincipal <= limit) return m.mortgageInterestReceived
-  return m.mortgageInterestReceived * (limit / m.outstandingPrincipal)
+  const avg = averagePrincipal(m)
+  if (avg <= limit) return m.mortgageInterestReceived
+  return m.mortgageInterestReceived * (limit / avg)
 }
 
 const showSummary = (m: Form1098Mortgage<Date | string>): ReactElement => {
@@ -47,6 +54,7 @@ interface Form1098MortgageUserInput {
   lenderName: string
   mortgageInterestReceived: string | number
   outstandingPrincipal: string | number
+  principalAtYearEnd: string | number
   originationDate: Date | undefined
   mortgageInsurancePremiums: string | number
   points: string | number
@@ -56,6 +64,7 @@ const blankUserInput: Form1098MortgageUserInput = {
   lenderName: '',
   mortgageInterestReceived: '',
   outstandingPrincipal: '',
+  principalAtYearEnd: '',
   originationDate: undefined,
   mortgageInsurancePremiums: '',
   points: ''
@@ -65,6 +74,7 @@ const toUserInput = (m: Form1098Mortgage): Form1098MortgageUserInput => ({
   lenderName: m.lenderName,
   mortgageInterestReceived: m.mortgageInterestReceived,
   outstandingPrincipal: m.outstandingPrincipal,
+  principalAtYearEnd: m.principalAtYearEnd ?? '',
   originationDate:
     m.originationDate instanceof Date
       ? m.originationDate
@@ -82,6 +92,9 @@ const toForm1098Mortgage = (
   // DatePicker gives a Date; send as ISO string — reducer converts back to Date
   originationDate: f.originationDate?.toISOString() ?? '',
 
+  ...(f.principalAtYearEnd !== '' && {
+    principalAtYearEnd: Number(f.principalAtYearEnd)
+  }),
   ...(f.mortgageInsurancePremiums !== '' && {
     mortgageInsurancePremiums: Number(f.mortgageInsurancePremiums)
   }),
@@ -162,6 +175,12 @@ export default function F1098MortgageInfo(): ReactElement {
               patternConfig={Patterns.currency}
               required={true}
               name="outstandingPrincipal"
+            />
+            <LabeledInput
+              label="Outstanding mortgage principal (as of Dec 31, optional)"
+              patternConfig={Patterns.currency}
+              required={false}
+              name="principalAtYearEnd"
             />
             <DatePicker
               label="Box 3 — Mortgage origination date"

@@ -513,6 +513,8 @@ export interface Form1098Mortgage<D = Date> {
   mortgageInterestReceived: number
   /** Box 2: Outstanding mortgage principal as of January 1. */
   outstandingPrincipal: number
+  /** Outstanding mortgage principal as of December 31 (end of year). */
+  principalAtYearEnd?: number
   /**
    * Box 3: Mortgage origination date.
    * Pre-Dec 16 2017 loans → $1,000,000 acquisition debt limit.

@@ -114,7 +114,10 @@ const dateStringTransform = createTransform(
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 const migrations = {
   0: (state: any) => migrateEachYear(state),
-  1: (state: any) => migrateAgeAndBlindness(state)
+  1: (state: any) => migrateAgeAndBlindness(state),
+  // v2: re-run migrateEachYear so any new blankState fields (e.g. form1098s)
+  // are added to persisted states that pre-date them.
+  2: (state: any) => migrateEachYear(state)
 }
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-enable @typescript-eslint/no-explicit-any */
@@ -129,7 +132,7 @@ const persistedReducer = fsReducer(
       // number will be compared and all migrations between
       // the persisted version and the version here will be
       // applied in order
-      version: 1,
+      version: 2,
       storage,
       migrate: createMigrate(migrations, { debug: false }),
       transforms: [dateStringTransform]

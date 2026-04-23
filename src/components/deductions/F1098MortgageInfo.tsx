@@ -90,7 +90,7 @@ const toForm1098Mortgage = (
 
 export default function F1098MortgageInfo(): ReactElement {
   const form1098s = useSelector(
-    (state: TaxesState) => state.information.form1098s
+    (state: TaxesState) => state.information.form1098s ?? []
   )
 
   const defaultValues: Form1098MortgageUserInput = blankUserInput

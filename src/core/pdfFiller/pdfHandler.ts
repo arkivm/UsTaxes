@@ -43,7 +43,7 @@ export const getPdfs = async (
   const pdfFiles: Array<Promise<PDFDocument>> = formData.map(
     async ([data, f]) => {
       const values = data.fillInstructions ? [] : data.renderedFields()
-      const { warnings } = fillPdfFromFill(f, data.tag, data, values)
+      const { warnings } = await fillPdfFromFill(f, data.tag, data, values)
       if (warnings.length > 0) {
         console.warn('PDF fill warnings:', warnings)
       }

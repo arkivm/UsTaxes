@@ -23,7 +23,7 @@ export const createStatePDF =
         // warnings[] will always include the migration banner until state forms are
         // migrated.  Field count mismatches between the PDF and fields() are silent
         // (extra PDF fields get undefined; extra values are ignored) — not a throw risk.
-        const { warnings } = fillPdfFromFill(
+        const { warnings } = await fillPdfFromFill(
           loadedPdf,
           form.formName,
           form,

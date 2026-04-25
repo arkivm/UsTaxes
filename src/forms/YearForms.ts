@@ -81,7 +81,7 @@ export class YearCreateForm {
       Promise.all(
         forms.map(async (form) => {
           const pdf = await this.config.getPDF(form)
-          const { warnings } = fillPdfFromFill(
+          const { warnings } = await fillPdfFromFill(
             pdf,
             form.tag,
             form,
@@ -130,7 +130,7 @@ export class YearCreateForm {
       Promise.all(
         forms.map(async (form) => {
           const pdf = await this.config.getStatePDF(form)
-          const { warnings } = fillPdfFromFill(
+          const { warnings } = await fillPdfFromFill(
             pdf,
             form.formName,
             form,

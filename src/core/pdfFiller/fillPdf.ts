@@ -1,4 +1,11 @@
-import { PDFDocument, PDFCheckBox, PDFRadioGroup, PDFName } from 'pdf-lib'
+import {
+  PDFDocument,
+  PDFCheckBox,
+  PDFRadioGroup,
+  PDFName,
+  PDFFont,
+  StandardFonts
+} from 'pdf-lib'
 import { Field, FillInstructions, RadioSelect } from '.'
 import { displayRound } from '../irsForms/util'
 import Fill from './Fill'
@@ -63,18 +70,20 @@ export function deriveFillInstructionsFromPdf(
  * All notifications (including the legacy-path migration banner) are returned
  * in the `warnings` array so callers have a single channel to observe and log.
  */
-export function fillPdfFromFill(
+export async function fillPdfFromFill(
   pdf: PDFDocument,
   formName: string,
   fill: Fill,
   values: ReadonlyArray<Field>
-): { warnings: string[] } {
+): Promise<{ warnings: string[] }> {
+  const font = await pdf.embedFont(StandardFonts.Courier)
   if (fill.fillInstructions) {
     const { warnings } = fillPDFByName(
       pdf,
       fill.fillInstructions(),
       formName,
-      'strict'
+      'strict',
+      font
     )
     return { warnings }
   }
@@ -86,7 +95,8 @@ export function fillPdfFromFill(
     pdf,
     deriveFillInstructionsFromPdf(pdf, values),
     formName,
-    'strict'
+    'strict',
+    font
   )
   return { warnings: [legacyWarning, ...warnings] }
 }
@@ -116,7 +126,8 @@ export function fillPDFByName(
   pdf: PDFDocument,
   instructions: FillInstructions,
   formName: string,
-  mode: FillMode = 'strict'
+  mode: FillMode = 'strict',
+  font?: PDFFont
 ): { pdf: PDFDocument; warnings: string[] } {
   const form = pdf.getForm()
   const warnings: string[] = []
@@ -138,6 +149,9 @@ export function fillPDFByName(
       if (instr.kind === 'text') {
         const tf = form.getTextField(instr.name)
         tf.setText(formatValue(instr.value))
+        if (font !== undefined) {
+          tf.updateAppearances(font)
+        }
         tf.enableReadOnly()
       } else if (instr.kind === 'checkbox') {
         const cb = form.getCheckBox(instr.name)
